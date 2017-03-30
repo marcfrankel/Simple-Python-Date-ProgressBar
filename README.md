@@ -10,12 +10,12 @@ A simple, native, cross-platform python file/module to allow for the easy creati
 
 ### How to Use
 
-To use the Simple Python Progress Bar you can either simply download the progressBar.py file and place it in your python working directory or you can:
+To use the Simple Python Progress Bar you can either simply download the [progressBar.py](https://raw.githubusercontent.com/marcfrankel/Simple-Python-Date-ProgressBar/master/progressBar.py) file and place it in your python working directory or you can:
 
 **Clone the Git Repo**
 
 ```Bash
-git clone https://github.com/marcfrankel/GPA_Calculator.git
+git clone https://github.com/marcfrankel/Simple-Python-Date-ProgressBar.git
 ```
 Then also move the progressBar.py file into your python working directory
 
