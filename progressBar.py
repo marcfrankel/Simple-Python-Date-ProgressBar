@@ -1,4 +1,4 @@
-# (c) Marc Frankel | 2017 | Simple Python Progress Bar for Dates | MIT
+# (c) Marc Frankel | 2017 | Simple Python Progress Bar for Dates | MIT | V1.1
 
 import time
 import sys
@@ -18,6 +18,8 @@ def format_time(seconds):
 
 def create(startDate, endDate):
 	totalTime = (endDate - startDate).total_seconds()
+	if totalTime < 0:
+		return 0 
 	now = datetime.now()
 	try:
 		while now < endDate:
@@ -37,6 +39,7 @@ def create(startDate, endDate):
 				sys.stdout.write("\033[K")
 				sys.stdout.write("\033[F")
 				sys.stdout.write("\033[K")
+		return 1
 	except KeyboardInterrupt:
 		sys.stdout.write("\n")
 		sys.stdout.write("\n")
@@ -45,3 +48,4 @@ def create(startDate, endDate):
 		sys.stdout.write("\033[K")
 		sys.stdout.write("\033[F")
 		sys.stdout.write("\033[K")
+		return 2

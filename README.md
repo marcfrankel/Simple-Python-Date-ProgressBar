@@ -1,4 +1,4 @@
-# Simple Python Progress Bar for Dates
+# Simple Python Progress Bar for Dates V 1.1
 
 A simple, native, cross-platform python file/module to allow for the easy creation of a countdown clock and colored progress bar between two dates. The file is fairly simple and can be easly modified to count between anything.
 
@@ -31,12 +31,20 @@ import progressBar
 To create a progressBar in your code call progressBar.create() and pass in two [datetime](https://docs.python.org/3/library/datetime.html) objects
 
 ```Python
-progressBar.create(starting-Datetime-Object, ending-Datetime-Object)
+response = progressBar.create(starting-Datetime-Object, ending-Datetime-Object)
 ```
 
-The module will then create a progress bar that "hijacks" the program output. The progress bar will release control back to the main thread of the script when it either finishes or the KeyboardInterrupt error is thrown (user press control + c)
+The module will then create a progress bar that "hijacks" the program output. The progress bar will release control back to the main thread of the script when it either finishes or the KeyboardInterrupt error is thrown (user press control + c). To know the reason the progress bar stoped please see below.
 
+**Responses**
 
+the variable 'response' from above can be the following three ints and it is up to you how to handle them:
+
+```
+0 = The end date is before the start date. (No coutdown displayed)
+1 = The countdown finished
+2 = The user pressed control+c 
+```
 
 ## Built With
 
