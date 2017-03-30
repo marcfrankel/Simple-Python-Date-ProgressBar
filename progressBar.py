@@ -16,7 +16,7 @@ def format_time(seconds):
 	seconds %= 60
 	return "{:.0f} Days, {:.0f} Hours, {:.0f} Minutes, {:.0f} Seconds".format(days, hours, minutes, seconds)
 
-def progressBar(startDate, endDate):
+def create(startDate, endDate):
 	totalTime = (endDate - startDate).total_seconds()
 	now = datetime.now()
 	try:
