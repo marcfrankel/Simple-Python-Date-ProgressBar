@@ -1,4 +1,4 @@
-# Simple Python Progress Bar for Dates V 1.1
+# Simple Python Progress Bar for Dates V 1.2
 
 A simple, native, cross-platform python file/module to allow for the easy creation of a countdown clock and colored progress bar between two dates. The file is fairly simple and can be easly modified to count between anything.
 
