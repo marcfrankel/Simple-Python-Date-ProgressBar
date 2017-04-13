@@ -1,4 +1,4 @@
-# (c) Marc Frankel | 2017 | Simple Python Progress Bar for Dates | MIT | V1.1
+# (c) Marc Frankel | 2017 | Simple Python Progress Bar for Dates | MIT | V1.2
 
 import time
 import sys
@@ -34,6 +34,12 @@ def create(startDate, endDate):
 			if now < endDate:
 				sys.stdout.write("\033[F \033[F")
 			else: 
+
+				sys.stdout.write("\033[K")
+				sys.stdout.write("\033[F")
+				sys.stdout.write("\033[K")
+				sys.stdout.write("\033[F")
+				sys.stdout.write("\033[K")
 				sys.stdout.write("\033[K")
 				sys.stdout.write("\033[F")
 				sys.stdout.write("\033[K")
@@ -43,6 +49,11 @@ def create(startDate, endDate):
 	except KeyboardInterrupt:
 		sys.stdout.write("\n")
 		sys.stdout.write("\n")
+		sys.stdout.write("\033[K")
+		sys.stdout.write("\033[F")
+		sys.stdout.write("\033[K")
+		sys.stdout.write("\033[F")
+		sys.stdout.write("\033[K")
 		sys.stdout.write("\033[K")
 		sys.stdout.write("\033[F")
 		sys.stdout.write("\033[K")
